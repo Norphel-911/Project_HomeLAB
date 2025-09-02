@@ -1,1 +1,20 @@
+############Scénario 1############## 
+sudo apt install samba -y 
+sudo apt install smbclient
+sudo mkdir -p /srv/samba/share
+sudo chown nobody:nogroup /srv/samba/share
+sudo chmod 0775 /srv/samba/share
 
+//on va aller accéder au le fichier config du samba. 
+  On ajoute : 
+	[Public]
+		path = /srv/samba/share 
+		browsable = yes
+		read only = no 
+		guest ok = yes 
+sudo systemctl restart smbd
+sudo systemctl enable smbd
+
+sudo ufw allow samba ( si le firewall activé ).
+
+smbclient //192.168.2.3/Public 
