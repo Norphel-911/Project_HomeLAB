@@ -1,7 +1,7 @@
 
 ## 1. le but 
 PfSense se comporte comme firewall et un routeur pour le LAB. Il gère:
-	-le routage entre les VLANS et internet. 
+	-le routage entre les VLANS et internet 
 	-la fonction de DHCP pour les VLANS
 	-DNS forwarding 
 	-les règles Firewall pour contrôler le flux de trafic dans le réseau. 
