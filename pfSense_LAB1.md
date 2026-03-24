@@ -25,7 +25,7 @@ Option 2 - Assigner les IPs
 	-em1 = 192.168.10.1/24 + SANS DHCP, car les serveurs auront besoins d'une IP fixe.   
 	-em2 = 192.168.20.1/24 + DHCP  
  
-![Console de mon pfsense après la config.](C:\Users\tenzi\Pictures\Numérisations/console-pfsense.png)
+![Console de mon pfsense après la config.](Images/console-pfsense.png)
 
 ## 3. Web_GUI pfsense
 ### Configuation d'ubuntu vm : 
@@ -45,7 +45,7 @@ Depuis une page web on rentre :
 		NTP serer = 2.pfsense.pool.ntp.org  
 		Time Zone = Europe/Paris  
 
-![Dashboard pfsense.](C:\Users\tenzi\Pictures\Numérisations/pfsense_dashboard1.png)
+![Dashboard pfsense.](Images/pfsense_dashboard1.png)
 
 ## 4. Problème de DNS 
 Problème de résolution dns:  
@@ -74,10 +74,10 @@ Blocage d'un site via règle firewall:
 	On va utiliser nslookup pour repérer ip d'un site ou on peut utiliser DNS lookup dans pfsense.
 
 1. On peut voir que tout fonctionne correctement. 
-![Dashboard pfsense.](C:\Users\tenzi\Pictures\Numérisations/nslookup_ping.png)
+![Dashboard pfsense.](Images/nslookup_ping.png)
 
 2. Une règle crée qui bloque tous les requêtes envoyé par la machine(192.168.10.20) vers le site(192.54.115.242).
-![Dashboard pfsense.](C:\Users\tenzi\Pictures\Numérisations/firewall_rule.png)
+![Dashboard pfsense.](Images/firewall_rule.png)
 
 3. Une fois que la règle est mise en place, impossible d'accéder au site car les trafics sont capturé par la règle firewall et bloqués.
-![Dashboard pfsense.](C:\Users\tenzi\Pictures\Numérisations/ping_after.png)
+![Dashboard pfsense.](Images/ping_after.png)
