@@ -2,10 +2,11 @@
 ## 1. Objectif
 Configurer pfsense comme firewall et routeur pour le LAB avec segmentation et contrôle du trafic.    
 
--le routage entre les VLANS et internet. 	
--la fonction de DHCP pour les VLANS
--DNS forwarding 
--les règles Firewall pour contrôler le flux de trafic dans le réseau. 
+-le routage entre les VLANS et internet.   	
+-la fonction de DHCP pour les VLANS  
+-DNS forwarding   
+-les règles Firewall pour contrôler le flux de trafic dans le réseau.  
+
 ## 2. Configuration réseau
 
 | Interface | Rôle                    | IP               |
@@ -16,13 +17,13 @@ Configurer pfsense comme firewall et routeur pour le LAB avec segmentation et co
 
 ==*A savoir*== : Vmware nécessite une carte réseau par VLAN, alors que VirtualBox n'a besoin d'une seule carte réseau pour gérer tous les vlan.  
 #### Sur la console:
-Option 1 - Assigner les interfaces  
-	-em0 = WAN
-	-em1 = LAN (VLAN 10)
-	-em2 = OPT1 (VLAN 20)
-Option 2 - Assigner les IPs  
-	-em1 = 192.168.10.1/24 + SANS DHCP, car les serveurs auront besoins d'une IP fixe. 
-	-em2 = 192.168.20.1/24 + DHCP
+Option 1 - Assigner les interfaces    
+	-em0 = WAN  
+	-em1 = LAN (VLAN 10)  
+	-em2 = OPT1 (VLAN 20)  
+Option 2 - Assigner les IPs    
+	-em1 = 192.168.10.1/24 + SANS DHCP, car les serveurs auront besoins d'une IP fixe.   
+	-em2 = 192.168.20.1/24 + DHCP  
  
 ![Console de mon pfsense après la config.](C:\Users\tenzi\Pictures\Numérisations/console-pfsense.png)
 
